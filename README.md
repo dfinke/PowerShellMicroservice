@@ -1,3 +1,9 @@
+# PowerShell Microservice
+
+A PowerShell REST API running as a microservice in a Docker container.
+
+Plus, use PowerShell's `Invoke-Build` as continuous build to stop the container, rebuild the image, and then run the new container. Ready for testing.
+
 ## How to
 
 ```powershell
