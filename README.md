@@ -38,7 +38,7 @@ Invoke-RestMethod http://localhost:8080/echo/YourData
 
 ## Update the PowerShell Script
 
-- Edit `StartPdeServer.ps1`
+- Edit `StartPodeServer.ps1`
 - Comment out `Write-PodeTextResponse -Value 'hello world'`
 - *Uncomment* `Write-PodeTextResponse -Value 'hello world, from PowerShell in Docker'`
 - Save the file
