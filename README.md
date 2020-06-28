@@ -4,7 +4,18 @@ A PowerShell REST API running as a microservice in a Docker container.
 
 Plus, use PowerShell's `Invoke-Build` as continuous build to stop the container, rebuild the image, and then run the new container. Ready for testing.
 
-## How to
+## Direct from GitHub Build and Run Docker Container
+
+```powershell
+docker build --tag powershellmicroservice https://github.com/dfinke/PowerShellMicroservice.git
+docker run -d --name powershellmicroservice -p 8080:8080 powershellmicroservice
+
+sleep 2 # give the container a chance to spin up
+
+Invoke-RestMethod http://localhost:8080/ # Hello from PowerShell in Docker
+```
+
+## How to Build and Run Locally
 
 ```powershell
 Install-Module InvokeBuild
