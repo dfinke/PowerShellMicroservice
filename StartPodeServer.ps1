@@ -2,9 +2,8 @@ Start-PodeServer {
 
     Add-PodeEndpoint -Address * -Port 8080 -Protocol Http
 
-    Add-PodeRoute -Method Get -Path '/' -ScriptBlock {     
-        Write-PodeTextResponse -Value 'hello world' 
-        #Write-PodeTextResponse -Value 'hello world, from PowerShell in Docker' 
+    Add-PodeRoute -Method Get -Path '/' -ScriptBlock {             
+        Write-PodeTextResponse -Value 'Hello from PowerShell in Docker'
     }
 
     # echo it
