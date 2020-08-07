@@ -12,4 +12,10 @@ Start-PodeServer {
     
         Write-PodeTextResponse -Value "[$(Get-Date)] echo: $($e.Parameters['stuff'])"
     }
+
+    Add-PodeRoute -Method Get -Path '/hostname' -ScriptBlock {
+        param($e)
+    
+        Write-PodeTextResponse -Value "$(hostname)"
+    }
 }
