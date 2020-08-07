@@ -1,0 +1,10 @@
+version: '3'
+services:
+    powershellmicroservice1:
+        build: ./
+        ports:
+            - 8080:8080
+    powershellmicroservice2:
+        build: ./
+        ports:
+            - 8081:8080
